@@ -5,6 +5,9 @@ import lombok.Data;
 
 import java.util.Date;
 
+
+import com.sid.security.Auditable;
+
 @Entity
 @Table(name = "brand")
 @Data

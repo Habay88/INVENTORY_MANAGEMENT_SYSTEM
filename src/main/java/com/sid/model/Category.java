@@ -1,6 +1,7 @@
 package com.sid.model;
 
 import com.fasterxml.jackson.annotation.*;
+import com.sid.security.Auditable;
 
 import jakarta.persistence.*;
 import lombok.Data;
