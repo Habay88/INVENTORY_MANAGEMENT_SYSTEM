@@ -7,6 +7,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import com.sid.model.Role;
+import com.sid.service.RoleService;
 import com.sid.service.UserService;
 
 import java.util.List;

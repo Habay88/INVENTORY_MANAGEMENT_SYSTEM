@@ -65,15 +65,19 @@ public class User extends Auditable<String> {
 
     @Column(columnDefinition = "TEXT")
     private String profile;
+    
+    @OneToMany(mappedBy="user")
+    private List<UserPrivelegeAssignment> priveleges;
+    
 
-
-    @ManyToMany(cascade = {CascadeType.ALL}, fetch = FetchType.EAGER)
-    @JoinTable(
-            name = "user_role",
-            joinColumns = {@JoinColumn(name = "user_id")},
-            inverseJoinColumns = {@JoinColumn(name = "role_id")}
-    )
-    List<Role> roles;
+	
+	 
+	 @ManyToMany(cascade = {CascadeType.ALL}, fetch = FetchType.EAGER)
+	  
+	  @JoinTable( name = "user_role", joinColumns = {@JoinColumn(name =
+	  "user_id")}, inverseJoinColumns = {@JoinColumn(name = "role_id")} )
+	  List<Role> roles;
+	 
 
     @ElementCollection
     @CollectionTable(name = "social_links", joinColumns = @JoinColumn(name = "user_id"))

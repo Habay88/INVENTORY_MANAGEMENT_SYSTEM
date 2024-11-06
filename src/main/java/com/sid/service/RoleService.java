@@ -1,4 +1,4 @@
-package com.sid.security;
+package com.sid.service;
 
 
 
@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.sid.model.Role;
 import com.sid.repository.UserRepository;
+import com.sid.security.RoleRepository;
 
 import java.util.List;
 
