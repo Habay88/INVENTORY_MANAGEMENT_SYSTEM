@@ -6,8 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.sid.model.Role;
+import com.sid.repository.RoleRepository;
 import com.sid.repository.UserRepository;
-import com.sid.security.RoleRepository;
 
 import java.util.List;
 

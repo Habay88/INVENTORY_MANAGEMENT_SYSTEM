@@ -20,7 +20,7 @@ public class UserPrivelegeAssignment {
 
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
-    private Integer id;
+    private Long id;
     
     @ManyToOne
 	@JoinColumn(name="userid", insertable = false, updatable=false)
@@ -31,4 +31,9 @@ public class UserPrivelegeAssignment {
 	@JoinColumn(name="privelegeid", insertable = false, updatable=false)
 	private Privelege privelege;
 	private Long privelegeid;
+	public UserPrivelegeAssignment(Long userid, Long privelegeid) {
+		
+		this.userid = userid;
+		this.privelegeid = privelegeid;
+	}
 }
