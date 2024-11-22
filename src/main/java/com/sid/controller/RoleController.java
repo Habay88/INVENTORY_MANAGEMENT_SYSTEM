@@ -53,6 +53,17 @@ public class RoleController {
     
     @PostMapping("/role/{roleid}/assign/user/{userid}")
     public void assignUserRole(@PathVariable ("roleid")Long roleid, @PathVariable("userid") Long userid) {
-    	List<Privelege> priveleges = privelegeRepository.findByRoleid(roleid);
+    	
+    roleService.assignUserRole(userid, roleid);
     }
+    @DeleteMapping("/role/{roleid}/unAssign/user/{userid}")
+    public void unassignUserRole(@PathVariable ("roleid")Long roleid, @PathVariable("userid") Long userid) {
+    	
+    roleService.unAssignUserRole(userid, roleid);
+    }
+	@GetMapping("role/{roleid}/priveleges")
+	public List<Privelege> getPrivelegsInRole(@PathVariable("roleid") Long roleid){
+		
+	return	roleService.getPrivelegesInRole(roleid);
+	}
 }

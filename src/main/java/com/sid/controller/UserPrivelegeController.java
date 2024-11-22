@@ -34,7 +34,7 @@ public class UserPrivelegeController {
 	
 		  @DeleteMapping("/userPivelegAssignment/{id}")
 		  public void deleteUserPrivelegeAssignment(@PathVariable("id") Long id) {
-			  userPrivelegeService.delete(id);
+			  userPrivelegeService.deletePriveleges(id);
 		  
 			}
 		@Transactional
@@ -70,4 +70,4 @@ public class UserPrivelegeController {
         }
         	
         }
-}
+

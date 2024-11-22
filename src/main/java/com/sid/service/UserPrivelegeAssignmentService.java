@@ -44,7 +44,7 @@ public class UserPrivelegeAssignmentService {
 	    }
 
 	    //Delete privelege
-	    public void delete(Long userid) {
+	    public void deletePriveleges(Long userid) {
 	    	userprivelegeRepository.deleteById(userid);
 	    }
 
@@ -64,11 +64,6 @@ public class UserPrivelegeAssignmentService {
 					.map(UserPrivelegeAssignment::getUser).toList();
 	    }
 
-		public void deletePriveleges(Long userid) {
-			// TODO Auto-generated method stub
-			
-			
-		}
 		
 		
 		
